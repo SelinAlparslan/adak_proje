@@ -29,8 +29,8 @@ class Setting(models.Model):
     
 class Images(models.Model):
     title = models.CharField(max_length=50)
-    image = models.ImageField(blank = True, upload_to='images/')
-    detail = RichTextUploadingField()
+    image = models.ImageField( upload_to='images/')
+    detail = RichTextUploadingField(blank=True)
 
     def __str__(self):
         return self.title
