@@ -28,4 +28,11 @@ def iletisim(request):
     context = {'setting': setting,
                'form': form,
               }
-    return render(request, 'index.html', context)
+    return render(request, 'contact.html', context)
+
+def photo_detail(request, id):
+    setting = Setting.objects.get(pk=1)
+    photo = Images.objects.get(pk=id)
+    context = {'setting': setting,
+                'photo': photo}
+    return render(request, 'photo_detail.html', context)

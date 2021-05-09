@@ -11,7 +11,7 @@
                             <div class="image">
                                 <img src="{{ rs.image.url }}" alt="">
                                 <div class="featured-button button">
-                                    <a href="#projects">Continue Reading</a>
+                                    <a href="/photo/{{rs.id}}">Detaya Git</a>
                                 </div>
                             </div>
                             <div class="text-content">
@@ -32,7 +32,7 @@
                         {% for rs in randomphoto %}
                             <div class="item">
                                 <div class="col-md-4">
-                                    <a href="{% static 'img/portfolio_big_1.jpg' %}" data-lightbox="image"><img src="{{rs.image.url}}" alt="image 1"></a>
+                                    <a href="/photo/{{rs.id}}" ><img src="{{rs.image.url}}" ></a>
                                     <h4>{{rs.title}}</h4>
                                 </div>
                             </div>
@@ -41,4 +41,5 @@
                     </div>
                 </div>            
             </section>
+            
         </div>

@@ -12,25 +12,30 @@
                                 <div class="col-md-4">
                                   <fieldset>
                                     <input name="name" type="text" class="form-control" id="name" placeholder="İsminiz" required="">
+                                    {{form.name}}
                                   </fieldset>
                                 </div>
                                 <div class="col-md-4">
                                   <fieldset>
                                     <input name="email" type="email" class="form-control" id="email" placeholder="email" required="">
+                                    {{form.email}}
                                   </fieldset>
                                 </div>
                                  <div class="col-md-4">
                                   <fieldset>
                                     <input name="subject" type="text" class="form-control" id="subject" placeholder="Konu" required="">
+                                    {{form.subject}}
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
                                     <textarea name="message" rows="6" class="form-control" id="message" placeholder="Mesajınız" required=""></textarea>
+                                    {{form.message}}
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
+                                    {% csrf_token %}
                                     <button type="submit" id="form-submit" class="btn">Gönder</button>
                                   </fieldset>
                                 </div>

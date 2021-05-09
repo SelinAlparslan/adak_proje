@@ -1,0 +1,32 @@
+{% extends "homebase.html" %}
+{% block title %}
+   {{ setting.title }}
+{% endblock %}
+<style> 
+    .container {
+        overflow: center;
+         width: 50px;
+        height: 50px;
+    }
+
+    .container img {
+        object-fit: cover;
+        margin-left: 20%;
+    }
+</style>
+{%block content %}
+    
+    
+    
+    <div class='container img'>
+        <a>
+        <img 
+         src="{{photo.image.url}}"      
+         width="60%" 
+         height="60%" />
+         
+         <h3>{{photo.title}}</h3>
+         <h5>{{photo.description | safe}}</h5>
+         </a>
+    </div>
+{% endblock %}

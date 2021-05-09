@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.safestring import mark_safe 
 from ckeditor_uploader.fields import RichTextUploadingField
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput, Textarea
 # Create your models here.
 class Setting(models.Model):
     STATUS = (
@@ -63,3 +63,9 @@ class ContactFormu(ModelForm):
     class Meta:
         model=ContactFormMessage
         fields = ['name', 'email', 'subject', 'message']
+        widgets = {
+            'name': TextInput(attrs={'class':'input', 'placeholder':'isim'}),
+            'email': TextInput(attrs={'class':'input', 'placeholder':'email'}),
+            'subject': TextInput(attrs={'class':'input', 'placeholder':'konu'}),
+            'message': Textarea(attrs={'class':'input', 'placeholder':'mesajınız', 'rows':'5'}),
+        }
